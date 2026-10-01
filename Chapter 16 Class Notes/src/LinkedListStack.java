@@ -20,7 +20,18 @@ public class LinkedListStack
      *
      * @param element the element to add
     */
-
+    public void add(Object obj) {
+        if (first == null) {
+            first.data = obj;
+        }
+        else {
+            Node curr = new Node();
+            curr.data = first.data;
+            curr.next = first.next;
+            first.data = obj;
+            first.next = curr;
+        }
+    }
 
 
 
